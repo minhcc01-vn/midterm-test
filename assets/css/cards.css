@@ -1,0 +1,103 @@
+.section-card {
+    margin-top: 120px;
+    position: relative;
+    z-index: 8;
+}
+
+.card {
+    width: 100%;
+    border: 0;
+    border-radius: 4px;
+    background-color: transparent;
+    overflow: hidden;
+}
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 0 0 8px #000;
+    overflow: hidden;
+    transition: 0.2s;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+}   
+.card-img:hover {
+    transform: scale(1.01);
+}
+.card-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    border: 0;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 3px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.card-heading {
+    font-size: 15px;
+    padding: 0;
+    margin: 0;
+    letter-spacing: 1.2px;
+    font-weight: 400;
+    color: white;
+}
+.card-link {
+    text-decoration: none;
+    display: block;
+}
+.card-field {
+    flex-wrap: nowrap;
+    overflow: hidden;
+    position: relative;
+}
+
+.card-field:hover + .detail-field,
+.card-field:hover ~ .detail-field .next,
+.card-field:hover ~ .detail-field .previous {
+    display: block;
+    color: rgb(88, 52, 88);
+    cursor: pointer;
+}
+
+.detail-field {
+    position: absolute;
+    left: 0;
+    top: 30%;
+    color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    font-size: 2.4rem;
+    z-index: -1;
+}
+.detail-field:hover {
+    cursor: pointer;
+}
+
+.next,
+.previous {
+    position: absolute;
+    right: -40px;
+    animation: moveToRightFadeIn 0.3s ease-in-out ;
+    display: none;
+    cursor: pointer;
+    font-size: 50px;
+}
+
+.detail-field:hover {
+    display: block;
+}
+
+.next:hover, 
+.previous:hover {
+    display: block;
+    cursor: pointer;
+}
+.previous {
+    left: -40px;
+    animation: moveToLeftFadeIn 0.3s ease-in-out;
+}
+.previous::before {
+    left: 20px;
+}

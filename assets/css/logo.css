@@ -1,0 +1,21 @@
+
+/* logo  */
+.logo-box {
+    position: absolute;
+    top: -30px;
+    left: 0px;
+}
+.logo-box::before {
+    height: 135px;
+    border-radius: 4px 4px 24px 24px;
+    background-color: white;
+    width: 200px;
+    display: block;
+    content: '';
+    position: absolute;
+    left: 0; 
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.6);
+}
+.logo-box img {
+    transform: translate(10px, 16px);
+}
